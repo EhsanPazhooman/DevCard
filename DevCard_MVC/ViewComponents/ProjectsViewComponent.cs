@@ -1,6 +1,5 @@
 ﻿using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace DevCard_MVC.ViewComponents
 {
