@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jMhEgso2IoT4dFC50Q8Jfg3TxMtNzZld+Nxfmtf7wTg=",
+  "Hash": "A/pb4e3UEDHXc5eFlm+J1m4sWFuEeK+MThGa90ckZaA=",
   "Source": "DevCard_MVC",
   "BasePath": "_content/DevCard_MVC",
   "Mode": "Default",
@@ -510,12 +510,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\assets\\images\\clients\\profile-6.png"
     },
     {
-      "Identity": "D:\\asp.net\\DevCard\\DevCard_MVC\\wwwroot\\lib\\assets\\images\\me.jpeg",
+      "Identity": "D:\\asp.net\\DevCard\\DevCard_MVC\\wwwroot\\lib\\assets\\images\\myimage.jpg",
       "SourceId": "DevCard_MVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\asp.net\\DevCard\\DevCard_MVC\\wwwroot\\",
       "BasePath": "_content/DevCard_MVC",
-      "RelativePath": "lib/assets/images/me.jpeg",
+      "RelativePath": "lib/assets/images/myimage.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -524,7 +524,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\assets\\images\\me.jpeg"
+      "OriginalItemSpec": "wwwroot\\lib\\assets\\images\\myimage.jpg"
     },
     {
       "Identity": "D:\\asp.net\\DevCard\\DevCard_MVC\\wwwroot\\lib\\assets\\images\\profile.png",

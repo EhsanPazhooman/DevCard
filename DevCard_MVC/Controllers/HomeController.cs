@@ -1,5 +1,6 @@
 ﻿using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace DevCard_MVC.Controllers
@@ -7,9 +8,13 @@ namespace DevCard_MVC.Controllers
     public class HomeController : Controller
     {
 
-        public HomeController()
+        private readonly List<Service> _Services = new List<Service>()
         {
-        }
+            new Service(1,"نقره ای"),
+            new Service(2,"طلایی"),
+            new Service(3,"پلاتین"),
+            new Service(4,"الماس"),
+        };
 
         public IActionResult Index()
         {
@@ -19,21 +24,41 @@ namespace DevCard_MVC.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            var model = new Contact();
+            var model = new Contact
+            {
+                Services = new SelectList(_Services, "Id", "Name") 
+            };
             return View(model);
         }
 
         //[HttpPost]
-        //public JsonResult Contact(IFormCollection form)
+        //public JsonResult Contact(IFormCollection model)
         //{
         //    return Json(Ok());
         //}
 
         [HttpPost]
-        public JsonResult Contact(Contact form)
+        public IActionResult Contact(Contact model)
         {
-            Console.WriteLine(form.ToString()); 
-            return Json(Ok());
+            model.Services = new SelectList(_Services, "Id", "Name");
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "اطلاعات وارد شده صحیح نیست لطفا دوباره تلاش کنید";
+                return View(model);
+            }
+
+            ModelState.Clear();
+            
+            model = new Contact
+            {
+                Services = new SelectList(_Services, "Id", "Name")
+            };
+
+            ViewBag.success = "پیغام شما با موفقیت ارسال شد";
+            return View(model);  
+            
+            //return RedirectToAction("Index");
         }
 
 
